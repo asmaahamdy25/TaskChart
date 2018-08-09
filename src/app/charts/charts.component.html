@@ -1,0 +1,31 @@
+<ngx-charts-bar-vertical *ngIf="selected === 'bar-vertical'"
+  [view]="view"
+  [scheme]="color"
+  [results]="single"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+ >
+</ngx-charts-bar-vertical>
+<ngx-charts-pie-chart *ngIf="selected === 'pie-chart'"
+[view]="view"
+[scheme]="color"
+[results]="single"
+[legend]="showLegend"
+[explodeSlices]="explodeSlices"
+[labels]="showLabels"
+[doughnut]="doughnut"
+[gradient]="gradient"
+>
+</ngx-charts-pie-chart>
+<ngx-charts-number-card *ngIf="selected === 'number-card'"
+[view]="view"
+[scheme]="color"
+[results]="single"
+>
+</ngx-charts-number-card>
