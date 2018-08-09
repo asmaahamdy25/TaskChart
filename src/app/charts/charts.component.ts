@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { single } from '../data';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
@@ -10,6 +9,7 @@ import { single } from '../data';
 export class ChartsComponent implements OnInit {
   @Input() selected: string;
   @Input() color  ;
+  @Input() data : {} ;
   single: any[];
   view: any[] = [500, 200];
 
@@ -26,9 +26,7 @@ export class ChartsComponent implements OnInit {
   showLabels = true;
   explodeSlices = false;
   doughnut = false;
-
-
-  constructor() {Object.assign (this , {single}); }
+  constructor() { }//Object.assign ( this, { this.data}); }
 
   ngOnInit() {
   }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-
+//import { single } from './data';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,20 @@ export class AppComponent {
   title = 'TaskChart';
   chartType: string;
   colorSchema: any;
+  single = [
+    {
+      'name': 'Germany',
+      'value': 8940000
+    },
+    {
+      'name': 'USA',
+      'value': 5000000
+    },
+    {
+      'name': 'France',
+      'value': 7200000
+    }
+  ];
   color1 = {domain: ['#00ff00', '#ffff00', '	#0040ff', '#00ffff']};
   color2 = { domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']};
   color3 = {domain: ['#330000', '#990000', '#000000', '	#ff4d4d']};
@@ -18,7 +32,6 @@ export class AppComponent {
    return  this.chartType = select;
     console.log(this.chartType);
  }
-
  selectColor(color: any) {
    if (color === 'color1') {
  return this.colorSchema = this.color1;

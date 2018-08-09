@@ -1,7 +1,7 @@
 <ngx-charts-bar-vertical *ngIf="selected === 'bar-vertical'"
   [view]="view"
   [scheme]="color"
-  [results]="single"
+  [results]="data"
   [gradient]="gradient"
   [xAxis]="showXAxis"
   [yAxis]="showYAxis"
@@ -13,9 +13,9 @@
  >
 </ngx-charts-bar-vertical>
 <ngx-charts-pie-chart *ngIf="selected === 'pie-chart'"
-[view]="view"
+[view]="data"
 [scheme]="color"
-[results]="single"
+[results]="data"
 [legend]="showLegend"
 [explodeSlices]="explodeSlices"
 [labels]="showLabels"
@@ -26,6 +26,6 @@
 <ngx-charts-number-card *ngIf="selected === 'number-card'"
 [view]="view"
 [scheme]="color"
-[results]="single"
+[results]="data"
 >
 </ngx-charts-number-card>
